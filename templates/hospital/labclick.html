@@ -1,0 +1,29 @@
+{% extends 'hospital/homebase.html' %}
+
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom:0px;">
+  <h1 class="display-4" style="text-align:center;">Hello</h1>
+  <p class="lead">Welcome to Future Hospital's Lab Service</p>
+  <p class="lead">Fill in your details so that we can reach you</p>
+  <hr class="my-4">
+  <form method="POST">{% csrf_token %}
+    <div class="form-group">
+      <p>
+      <h3>{{ form.as_p }}</h3>
+      </p>
+      <br>
+      <input type="submit" value="Submit" class='btn btn-primary btn-lg'>
+    </div>
+  </form>
+  <!--<p class="lead">
+    
+    <a class="btn btn-primary btn-lg" href="/patientlogin" role="button">Login</a>
+  </p>-->
+  <div></div>
+
+  {% endblock content %}
