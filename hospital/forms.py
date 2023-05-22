@@ -72,7 +72,7 @@ class Bookambulance(forms.ModelForm):
 class Booklab(forms.ModelForm):
     class Meta:
         model= models.Lab
-        fields=['Name','address','mobile','Test','status']
+        fields=['Name','address','mobile','Test']
 
 
 #for contact us page

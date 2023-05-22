@@ -361,6 +361,28 @@ def admin_add_patient_view(request):
 
 
 
+@login_required(login_url='adminlogin')
+@user_passes_test(is_admin)
+def admin_ambulance_view(request):
+    #for both table in admin dashboard
+       ambulances=models.Ambulance.objects.all().order_by('-id')
+    
+       #return HttpResponseRedirect('admin_ambulance_view')
+       return render(request,'hospital/Admin_ambulance_view.html')
+
+
+
+@login_required(login_url='adminlogin')
+@user_passes_test(is_admin)
+def admin_lab_view(request):
+    #for both table in admin dashboard
+         Labs=models.Lab.objects.all().order_by('-id')
+        
+       #return HttpResponseRedirect('admin_ambulance_view')
+         return render(request,'hospital/Admin_lab_view.html')
+
+
+
 #------------------FOR APPROVING PATIENT BY ADMIN----------------------
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)

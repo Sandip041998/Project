@@ -73,7 +73,7 @@ class Lab(models.Model):
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=True)
     Test = models.CharField(max_length=50,choices=test,default='blood glucose test')
-    status=models.BooleanField(default=False)
+   
 
 
 
